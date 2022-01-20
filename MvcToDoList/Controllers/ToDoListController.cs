@@ -28,7 +28,7 @@ namespace MvcToDoList.Controllers
                                             orderby t.Status
                                             select t.Status;
 
-            // Use LINQ to get list of statuses.
+            // Use LINQ to get list of priorities.
             IQueryable<string> priorityQuery = from t in _context.ToDoList
                                                orderby t.Priority
                                                select t.Priority;
@@ -59,6 +59,20 @@ namespace MvcToDoList.Controllers
             };
 
             return View(toDoListStatusPriorityVM);
+        }
+
+        DateTime date = DateTime.Now;
+
+        // GET: ToDoList/Today
+        public async Task<IActionResult> Today()
+        {
+            return View(await _context.ToDoList.ToListAsync());
+        }
+
+        // GET: ToDoList/Upcoming
+        public async Task<IActionResult> UpcomingWeek()
+        {
+            return View(await _context.ToDoList.ToListAsync());
         }
 
         // GET: ToDoList/Details/5

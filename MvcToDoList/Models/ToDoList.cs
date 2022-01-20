@@ -49,7 +49,7 @@ namespace MvcToDoList.Models
         [DataType(DataType.Date)]
         public DateTime Created { get; set; } = DateTime.Now;
 
-        [Display(Name = "Complete By")]
+        [Display(Name = "Due Date")]
         [DataType(DataType.Date)]
         public DateTime CompleteBy { get; set; } = DateTime.Now.AddDays(1);
     }

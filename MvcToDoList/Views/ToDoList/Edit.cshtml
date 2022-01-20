@@ -4,9 +4,7 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
-
-<h4>ToDoList</h4>
+<h4>Edit To-Do</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -18,50 +16,53 @@
                 <input asp-for="Task" class="form-control" />
                 <span asp-validation-for="Task" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-2">
                 <label asp-for="Description" class="control-label"></label>
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-2 col-md-7">
                 <label asp-for="Status" class="control-label"></label>
-                <select asp-for="Status" asp-items="Model.StatusList"></select>
+                <select asp-for="Status" asp-items="Model.StatusList" class="form-select"></select>
                 <span asp-validation-for="Status" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-2 col-md-7">
                 <label asp-for="Priority" class="control-label"></label>
-                <select asp-for="Priority" asp-items="Model.PriorityList"></select>
+                <select asp-for="Priority" asp-items="Model.PriorityList" class="form-select"></select>
                 <span asp-validation-for="Priority" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-2">
                 <label asp-for="Assgignee" class="control-label"></label>
                 <input asp-for="Assgignee" class="form-control" />
                 <span asp-validation-for="Assgignee" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-2">
                 <label asp-for="Comments" class="control-label"></label>
                 <input asp-for="Comments" class="form-control" />
                 <span asp-validation-for="Comments" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-2 col-md-7">
                 <label asp-for="Created" class="control-label"></label>
                 <input asp-for="Created" class="form-control" />
                 <span asp-validation-for="Created" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mt-2 col-md-7">
                 <label asp-for="CompleteBy" class="control-label"></label>
                 <input asp-for="CompleteBy" class="form-control" />
                 <span asp-validation-for="CompleteBy" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+            <br />
+            <div class="d-flex">
+                <div>
+                    <a asp-action="Index" class="btn btn-secondary"> 
+                        <i class="bi bi-chevron-left"></i> Back</a>
+                </div>
+                <div class="ms-auto">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
             </div>
         </form>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {
