@@ -61,18 +61,86 @@ namespace MvcToDoList.Controllers
             return View(toDoListStatusPriorityVM);
         }
 
-        DateTime date = DateTime.Now;
-
         // GET: ToDoList/Today
-        public async Task<IActionResult> Today()
+        public async Task<IActionResult> Today(string toDoListPriority, string toDoListStatus, string searchString)
         {
-            return View(await _context.ToDoList.ToListAsync());
+            // Use LINQ to get list of statuses.
+            IQueryable<string> statusQuery = from t in _context.ToDoList
+                                             orderby t.Status
+                                             select t.Status;
+
+            // Use LINQ to get list of priorities.
+            IQueryable<string> priorityQuery = from t in _context.ToDoList
+                                               orderby t.Priority
+                                               select t.Priority;
+
+            var toDoList = from t in _context.ToDoList
+                           select t;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                toDoList = toDoList.Where(s => s.Task!.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(toDoListStatus))
+            {
+                toDoList = toDoList.Where(x => x.Status == toDoListStatus);
+            }
+
+            if (!string.IsNullOrEmpty(toDoListPriority))
+            {
+                toDoList = toDoList.Where(x => x.Priority == toDoListPriority);
+            }
+
+            var toDoListStatusPriorityVM = new ToDoListStatusPriorityViewModel
+            {
+                Priorities = new SelectList(await priorityQuery.Distinct().ToListAsync()),
+                Statuses = new SelectList(await statusQuery.Distinct().ToListAsync()),
+                ToDoLists = await toDoList.ToListAsync()
+            };
+
+            return View(toDoListStatusPriorityVM);
         }
 
         // GET: ToDoList/Upcoming
-        public async Task<IActionResult> UpcomingWeek()
+        public async Task<IActionResult> UpcomingWeek(string toDoListPriority, string toDoListStatus, string searchString)
         {
-            return View(await _context.ToDoList.ToListAsync());
+            // Use LINQ to get list of statuses.
+            IQueryable<string> statusQuery = from t in _context.ToDoList
+                                             orderby t.Status
+                                             select t.Status;
+
+            // Use LINQ to get list of priorities.
+            IQueryable<string> priorityQuery = from t in _context.ToDoList
+                                               orderby t.Priority
+                                               select t.Priority;
+
+            var toDoList = from t in _context.ToDoList
+                           select t;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                toDoList = toDoList.Where(s => s.Task!.Contains(searchString));
+            }
+
+            if (!string.IsNullOrEmpty(toDoListStatus))
+            {
+                toDoList = toDoList.Where(x => x.Status == toDoListStatus);
+            }
+
+            if (!string.IsNullOrEmpty(toDoListPriority))
+            {
+                toDoList = toDoList.Where(x => x.Priority == toDoListPriority);
+            }
+
+            var toDoListStatusPriorityVM = new ToDoListStatusPriorityViewModel
+            {
+                Priorities = new SelectList(await priorityQuery.Distinct().ToListAsync()),
+                Statuses = new SelectList(await statusQuery.Distinct().ToListAsync()),
+                ToDoLists = await toDoList.ToListAsync()
+            };
+
+            return View(toDoListStatusPriorityVM);
         }
 
         // GET: ToDoList/Details/5
