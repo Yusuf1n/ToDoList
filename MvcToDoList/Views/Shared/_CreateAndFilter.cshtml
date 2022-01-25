@@ -1,0 +1,36 @@
+﻿@model MvcToDoList.Models.ToDoListStatusPriorityViewModel
+
+<p>
+        <div class="d-flex pt-2">
+
+            <p class="pe-5">
+                <a asp-action="Create" class="btn btn-success">
+                    <i class="bi bi-plus-lg"></i> Create New
+                </a>
+            </p>
+
+            <div class="ps-5">
+                @*Status:*@
+                <select asp-for="ToDoListStatus" asp-items="Model.Statuses" class="form-select">
+                    <option value="" class="dropdown-item disabled">Status</option>
+                </select>
+            </div>
+
+            <div class="ps-3">
+                @*Priority:*@
+                <select asp-for="ToDoListPriority" asp-items="Model.Priorities" class="form-select">
+                    <option value="" class="dropdown-item disabled">Priority</option>
+                </select>
+            </div>
+
+            <div class="ps-3">
+                @*Task:*@ <input type="text" name="SearchString" class="form-control" placeholder="Task" />
+
+            </div>
+
+            <div class="ps-4">
+                <input type="submit" value="Filter" class="btn btn-secondary my-2 my-sm-0" />
+            </div>
+
+        </div>
+    </p>
