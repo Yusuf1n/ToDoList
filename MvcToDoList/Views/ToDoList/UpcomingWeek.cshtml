@@ -13,41 +13,7 @@
 </form>
 
 <table class="table table-striped table-hover">
-    <thead class="table-dark">
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ToDoLists[0].Task)
-            </th>
-            <th></th>
-            <th>
-                @Html.DisplayNameFor(model => model.ToDoLists[0].Description)
-            </th>
-            <th></th>
-            <th>
-                @Html.DisplayNameFor(model => model.ToDoLists[0].Status)
-            </th>
-            <th></th>
-            <th>
-                @Html.DisplayNameFor(model => model.ToDoLists[0].Priority)
-            </th>
-            <th></th>
-            <th>
-                @Html.DisplayNameFor(model => model.ToDoLists[0].Assgignee)
-            </th>
-            <th></th>
-            <th>
-                @Html.DisplayNameFor(model => model.ToDoLists[0].Created)
-            </th>
-            <th></th>
-            <th>
-                @Html.DisplayNameFor(model => model.ToDoLists[0].CompleteBy)
-            </th>
-            <th></th>
-            <th></th>
-            <th></th>
-            <th></th>
-        </tr>
-    </thead>
+    <partial name="_TableHead" />
 
     <tbody>
         @foreach (var item in Model.ToDoLists)
