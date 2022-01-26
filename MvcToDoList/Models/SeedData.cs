@@ -20,12 +20,12 @@ namespace MvcToDoList.Models
                 context.ToDoList.AddRange(
                     new ToDoList
                     {
-                        Task = "Learn ASP.NET Core",
-                        Description = "Learning to build the new Licensing systems.",
-                        Status = "In progress",
+                        Task = "Learn Arabic",
+                        Description = "Attend online Arabic course",
+                        Status = "To do",
                         Priority = "Medium",
                         Assgignee = "Yusuf Naheem",
-                        Comments = "Looking into MVC and Razor syntax.",
+                        Comments = "Revise lesson 3 notes before attending class.",
                         Created = DateTime.Parse("2022-01-05"),
                         CompleteBy = DateTime.Parse("2022-01-07")
                     },
@@ -34,7 +34,7 @@ namespace MvcToDoList.Models
                     {
                         Task = "Go to the Gym",
                         Description = "Go to the Gym at 5pm and train legs.",
-                        Status = "To-do",
+                        Status = "Planning",
                         Priority = "High",
                         Assgignee = "Yusuf Naheem",
                         Comments = "Take a bottle of watter with you.",
@@ -45,11 +45,11 @@ namespace MvcToDoList.Models
                     new ToDoList
                     {
                         Task = "Buy a new laptop",
-                        Description = "Buy a new laptop for home with good specs, budget of £400",
+                        Description = "Buy a new laptop for brother with good specs. (Budget of £500)",
                         Status = "Open",
-                        Priority = "Medium",
+                        Priority = "Low",
                         Assgignee = "Yusuf Naheem",
-                        Comments = "Min i5 processor.",
+                        Comments = "Minimum i5 processor.",
                         Created = DateTime.Parse("2022-01-06"),
                         CompleteBy = DateTime.Parse("2022-01-10")
                     },
@@ -58,12 +58,48 @@ namespace MvcToDoList.Models
                     {
                         Task = "Grocery shopping",
                         Description = "Weekly grocery shopping",
-                        Status = "To-do",
-                        Priority = "Low",
-                        Assgignee = "Dad",
+                        Status = "To do",
+                        Priority = "High",
+                        Assgignee = "Mum",
                         Comments = "Dont forget milk!",
                         Created = DateTime.Parse("2022-01-11"),
                         CompleteBy = DateTime.Parse("2022-01-11")
+                    },
+
+                    new ToDoList
+                    {
+                        Task = "Schedule a meeting for designing the E-commerce website",
+                        Description = "Download required Software and tools.",
+                        Status = "Planning",
+                        Priority = "High",
+                        Assgignee = "Mark Zuckerberg",
+                        Comments = "",
+                        Created = DateTime.Now,
+                        CompleteBy = DateTime.Now.AddDays(2)
+                    },
+
+                    new ToDoList
+                    {
+                        Task = "Read 2 Pages of Atomic Habits",
+                        Description = "Review what you had read once complete",
+                        Status = "In progress",
+                        Priority = "Low",
+                        Assgignee = "Yusuf Naheem",
+                        Comments = "",
+                        Created = DateTime.Now,
+                        CompleteBy = DateTime.Now
+                    },
+
+                    new ToDoList
+                    {
+                        Task = "Renew Gym memberhsip",
+                        Description = "",
+                        Status = "To do",
+                        Priority = "High",
+                        Assgignee = "Yusuf Naheem",
+                        Comments = "",
+                        Created = DateTime.Parse("2022-02-08"),
+                        CompleteBy = DateTime.Parse("2022-02-11")
                     }
                     );
                 context.SaveChanges();
