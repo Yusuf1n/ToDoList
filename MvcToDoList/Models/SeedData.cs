@@ -196,6 +196,42 @@ namespace MvcToDoList.Models
                         Comments = "",
                         Created = DateTime.Now,
                         CompleteBy = DateTime.Now.AddDays(6)
+                    },
+
+                    new ToDoList
+                    {
+                        Task = "Do some more DSA challenges",
+                        Description = "Use resources like HackerRank or Leetcode",
+                        Status = "Planned",
+                        Priority = "High",
+                        Assgignee = "Yusuf Naheem",
+                        Comments = "",
+                        Created = DateTime.Now.AddDays(3),
+                        CompleteBy = DateTime.Now.AddDays(5)
+                    },
+
+                    new ToDoList
+                    {
+                        Task = "Look at Linux/Ubuntu",
+                        Description = "",
+                        Status = "Planned",
+                        Priority = "High",
+                        Assgignee = "Yusuf Naheem",
+                        Comments = "",
+                        Created = DateTime.Now.AddDays(3),
+                        CompleteBy = DateTime.Now.AddDays(5)
+                    },
+
+                    new ToDoList
+                    {
+                        Task = "Look at Linux/Ubuntu",
+                        Description = "",
+                        Status = "Planned",
+                        Priority = "High",
+                        Assgignee = "Yusuf Naheem",
+                        Comments = "",
+                        Created = DateTime.Now.AddDays(3),
+                        CompleteBy = DateTime.Now.AddDays(5)
                     }
                     ); ;
                 context.SaveChanges();
