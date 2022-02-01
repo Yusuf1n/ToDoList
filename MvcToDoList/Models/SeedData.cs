@@ -100,8 +100,104 @@ namespace MvcToDoList.Models
                         Comments = "",
                         Created = DateTime.Parse("2022-02-08"),
                         CompleteBy = DateTime.Parse("2022-02-11")
+                    },
+
+                    new ToDoList
+                    {
+                        Task = "Go for a walk",
+                        Description = "At 5:45pm",
+                        Status = "To-do",
+                        Priority = "Medium",
+                        Assgignee = "Yusuf Naheem",
+                        Comments = "",
+                        Created = DateTime.Now,
+                        CompleteBy = DateTime.Now
+                    },
+
+                    new ToDoList
+                    {
+                        Task = "Go for a walk",
+                        Description = "At 5:45pm",
+                        Status = "To-do",
+                        Priority = "Medium",
+                        Assgignee = "Yusuf Naheem",
+                        Comments = "",
+                        Created = DateTime.Now,
+                        CompleteBy = DateTime.Now
+                    },
+
+                    new ToDoList
+                    {
+                        Task = "Learn about Unit Tests",
+                        Description = "Go over Microsoft Docs for C# xUnit",
+                        Status = "Planning",
+                        Priority = "High",
+                        Assgignee = "Yusuf Naheem",
+                        Comments = "",
+                        Created = DateTime.Now,
+                        CompleteBy = DateTime.Now
+                    },
+
+                    new ToDoList
+                    {
+                        Task = "Book holiday",
+                        Description = "Look at holidays deals for March",
+                        Status = "To-do",
+                        Priority = "Medium",
+                        Assgignee = "Dad",
+                        Comments = "",
+                        Created = DateTime.Now,
+                        CompleteBy = DateTime.Now.AddDays(1)
+                    },
+
+                    new ToDoList
+                    {
+                        Task = "Book holiday",
+                        Description = "Look at holidays deals for March",
+                        Status = "To-do",
+                        Priority = "Medium",
+                        Assgignee = "Dad",
+                        Comments = "",
+                        Created = DateTime.Now,
+                        CompleteBy = DateTime.Now.AddDays(10)
+                    },
+
+                    new ToDoList
+                    {
+                        Task = "Get car serviced",
+                        Description = "",
+                        Status = "To-do",
+                        Priority = "Medium",
+                        Assgignee = "Dad",
+                        Comments = "",
+                        Created = DateTime.Now,
+                        CompleteBy = DateTime.Now.AddDays(6)
+                    },
+
+                    new ToDoList
+                    {
+                        Task = "Look at new Corsair desk chairs",
+                        Description = "Budget £120",
+                        Status = "Planned",
+                        Priority = "Lowest",
+                        Assgignee = "Yusuf Naheem",
+                        Comments = "",
+                        Created = DateTime.Now.AddDays(3),
+                        CompleteBy = DateTime.Now.AddDays(5)
+                    },
+
+                    new ToDoList
+                    {
+                        Task = "Look into the new updates in C# 10",
+                        Description = "",
+                        Status = "To-do",
+                        Priority = "Medium",
+                        Assgignee = "Yusuf Naheem",
+                        Comments = "",
+                        Created = DateTime.Now,
+                        CompleteBy = DateTime.Now.AddDays(6)
                     }
-                    );
+                    ); ;
                 context.SaveChanges();
             }
         }
