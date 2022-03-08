@@ -9,6 +9,7 @@ To-Do List App built with ASP.NET Core 6 MVC &amp; EF Core (.NET 6)
 #### Frontend
 * Razor
 * Bootstrap
+* toastr.js package for Alerts 
 
 #### Backend
 * .NET/C# | ASP.NET Core MVC 
