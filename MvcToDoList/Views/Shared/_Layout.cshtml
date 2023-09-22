@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - To-Do List App</title>
+    <title>@ViewData["Title"] - FKA- To-Do List Uygulamam</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/MvcToDoList.styles.css" asp-append-version="true" />
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="shortcut icon" href="wwwroot/icons/favicon.ico">
 </head>
-<body style="background-color: #e1e6e6">
+<body style="background-color: #FF7F00">
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color: #cacfcf">
             <div class="container-fluid">
@@ -24,27 +24,31 @@
                         @*<li class="nav-item ms-3">
                             <a class="nav-link text-dark fs-5" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>*@
-                        <li class="mx-3">
-                            <a class="nav-link text-dark fs-5" asp-controller="ToDoList" asp-action="Index">To-Do List</a>
+                        <li class="mx-3"> 
+                            
+                            <a class="nav-link text-dark fs-5" asp-controller="ToDoList" asp-action="Index">FKA-To-Do List Sayfasına Hoş Geldiniz</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-dark fs-5" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                              Calendar
+                        <li class="nav-item dropdown"> 
+							
+                            <a class="nav-link dropdown-toggle text-dark fs-5"  href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+							
+                                --Takvimim--
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="nav-link text-dark" asp-controller="ToDoList" asp-action="Today">Today</a>
+                                    <a class="nav-link text-dark" asp-controller="ToDoList" asp-action="Today">Bugün</a>
                                 </li>
                                 <li>
-                                    <a class="nav-link text-dark" asp-controller="ToDoList" asp-action="UpcomingWeek">Upcoming Week</a>
+                                    <a class="nav-link text-dark" asp-controller="ToDoList" asp-action="UpcomingWeek">Gelecek Planlarım</a>
                                 </li>
                             </ul>
                         </li>
+                       
                         @*<li>
-                            <a class="nav-link text-dark" asp-controller="ToDoList" asp-action="Today">Today</a>
+                            <a class="nav-link text-dark" asp-controller="ToDoList" asp-action="Today">Bugün</a>
                             </li>
                             <li>
-                            <a class="nav-link text-dark" asp-controller="ToDoList" asp-action="UpcomingWeek">Upcoming Week</a>
+                            <a class="nav-link text-dark" asp-controller="ToDoList" asp-action="UpcomingWeek">Gelecek Planlarım</a>
                             </li>*@@*
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
@@ -62,9 +66,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted" style="background-color: #cacfcf">
-        <div class="container">
-            &copy; 2022
+    <footer class="border-top footer text-muted" style="background-color: #ffffff">
+        <div class="container" style="display: flex; justify-content: center;">
+            &copy; Fırat Kalkınma Ajansı Destekli C# Eğitimi Proje Ödevim. Hazırlayan: Arda Atik -2023- <img src="~/icons/img1.jpeg" width="80" height="80" />  <img src="~/icons/img2.jpeg" width="80" height="80" />
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

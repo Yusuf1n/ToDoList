@@ -33,31 +33,31 @@
                     @Html.DisplayFor(modelItem => item.Status)
                 </td>
                 <td></td>
-                @if (item.Priority == "Highest")
+                @if (item.Priority == "Önem Derecesi")
                 {
                     <td style="color:#8B0000;">
                     @Html.DisplayFor(modelItem => item.Priority)
                 </td>
                 }
-                @if (item.Priority == "High")
+                @if (item.Priority == "Yüksek")
                 {
                     <td class="text-danger">
                     @Html.DisplayFor(modelItem => item.Priority)
                 </td>
                 }
-                @if (item.Priority == "Medium")
+                @if (item.Priority == "Orta")
                 {
                     <td class="text-warning">
                     @Html.DisplayFor(modelItem => item.Priority)
                 </td>
                 }
-                @if (item.Priority == "Low")
+                @if (item.Priority == "Düşük")
                 {
                     <td style="color:#1E90FF;">
                     @Html.DisplayFor(modelItem => item.Priority)
                 </td>
                 }
-                @if (item.Priority == "Lowest")
+                @if (item.Priority == "Önemsiz")
                 {
                     <td style="color:#0000CD;">
                     @Html.DisplayFor(modelItem => item.Priority)

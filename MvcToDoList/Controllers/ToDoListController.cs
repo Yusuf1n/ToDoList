@@ -184,7 +184,7 @@ namespace MvcToDoList.Controllers
             {
                 _context.Add(toDoList);
                 await _context.SaveChangesAsync();
-                TempData["Success"] = "To Do created successfully";
+                TempData["Success"] = "Oluşturma işlemi Gerçekleşti";
                 return RedirectToAction(nameof(Index));
             }
             return View(toDoList);
@@ -224,7 +224,7 @@ namespace MvcToDoList.Controllers
                 {
                     _context.Update(toDoList);
                     await _context.SaveChangesAsync();
-                    TempData["Success"] = "To Do updated successfully";
+                    TempData["Success"] = "Güncelleme işlemi Gerçekleşti";
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -268,7 +268,7 @@ namespace MvcToDoList.Controllers
             var toDoList = await _context.ToDoList.FindAsync(id);
             _context.ToDoList.Remove(toDoList);
             await _context.SaveChangesAsync();
-            TempData["Success"] = "To Do deleted successfully";
+            TempData["Success"] = "Silme İşlemi Gerçekleşti";
             return RedirectToAction(nameof(Index));
         }
 

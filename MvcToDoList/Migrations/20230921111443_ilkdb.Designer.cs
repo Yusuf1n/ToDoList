@@ -12,8 +12,8 @@ using MvcToDoList.Data;
 namespace MvcToDoList.Migrations
 {
     [DbContext(typeof(MvcToDoListContext))]
-    [Migration("20220105143754_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230921111443_ilkdb")]
+    partial class ilkdb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -37,16 +37,18 @@ namespace MvcToDoList.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Comments")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(250)
+                        .HasColumnType("nvarchar(250)");
 
-                    b.Property<DateTime?>("CompleteBy")
+                    b.Property<DateTime>("CompleteBy")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("Created")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.Property<string>("Priority")
                         .IsRequired()
@@ -58,7 +60,8 @@ namespace MvcToDoList.Migrations
 
                     b.Property<string>("Task")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("Id");
 
