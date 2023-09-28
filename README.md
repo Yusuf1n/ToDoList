@@ -17,7 +17,4 @@ To-Do List App built with ASP.NET Core 6 MVC &amp; EF Core (.NET 6)
 * Hosted on Azure
 * xUnit
 
-### To-Do List Demo
-![To-do List](https://user-images.githubusercontent.com/71137409/157198501-1b450b76-4a5e-43a5-aa57-1e7358c9f53c.gif)
-
-or visit this link: https://user-images.githubusercontent.com/71137409/157198501-1b450b76-4a5e-43a5-aa57-1e7358c9f53c.gif
+*Bu proje Fýrat Kalkýnma Ajansý tarafýndan düzenlenen C# eðitimi için Arda Atik Tarafýndan Yapýlmýþtýr.
